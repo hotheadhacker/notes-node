@@ -17,10 +17,10 @@ console.log(argv);
 
 if(command==='add'){
   console.log('Adding note...');
-  notes.addNote(argv.title,argv.body);
+  var note = notes.addNote(argv.title,argv.body);
   if(note){
     console.log('Note Created');
-    console.log(_______________________________);
+    console.log('_______________________________');
     console.log(`Title: ${note.title}`);
     console.log(`Body: ${note.body}`);
 
@@ -43,7 +43,10 @@ else if(command==='read'){
 
 else if(command==='remove'){
   console.log('Removing a note');
-  notes.remove(argv.title);
+  var noteRemoved = notes.remove(argv.title);
+
+  var message = noteRemoved? 'Not Was Removed' : 'Note Not Found';
+  console.log(message);
 }
 else{
   console.log('INVALID COMMAND... PLEASE TRY AGAIN WITH A CORRECT ONE!');

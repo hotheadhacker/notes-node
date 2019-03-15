@@ -42,7 +42,12 @@ var read = (title) => {
 };
 
 var remove = (title) => {
-  console.log('Note Removed Successfully...', title);
+  var notes = fetchNotes();
+  var filteredNotes = notes.filter((note) => note.title !== title);
+  saveNotes(filteredNotes);
+
+  return notes.length !== filteredNotes.length;
+
 };
 module.exports =  {
 addNote,

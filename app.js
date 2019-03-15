@@ -16,8 +16,19 @@ console.log(process.argv);
 console.log(argv);
 
 if(command==='add'){
-  console.log('Adding note');
+  console.log('Adding note...');
   notes.addNote(argv.title,argv.body);
+  if(note){
+    console.log('Note Created');
+    console.log(_______________________________);
+    console.log(`Title: ${note.title}`);
+    console.log(`Body: ${note.body}`);
+
+  }
+  else{
+    console.log('Note Title Take... Try New One.');
+  }
+
 }
 
 else if(command==='list'){

@@ -20,9 +20,7 @@ if(command==='add'){
   var note = notes.addNote(argv.title,argv.body);
   if(note){
     console.log('Note Created');
-    console.log('_______________________________');
-    console.log(`Title: ${note.title}`);
-    console.log(`Body: ${note.body}`);
+    notes.logNote(note);
 
   }
   else{
@@ -38,7 +36,14 @@ else if(command==='list'){
 
 else if(command==='read'){
   console.log('Reading Note');
-  notes.read(argv.title);
+
+  var note = notes.read(argv.title);
+  if(note){
+  notes.logNote(note);
+  }else{
+    console.log('Note Not Found!');
+  }
+
 }
 
 else if(command==='remove'){

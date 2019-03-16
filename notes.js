@@ -1,4 +1,4 @@
-console.log('Starting notes.js');
+
 const fs = require('fs');
 
 //Refactored Version of fetch and saveNotes
@@ -35,6 +35,7 @@ var addNote = (title,body) => {
 
 var getAll = () => {
   console.log('Grabbing Notes...');
+  return fetchNotes();
 };
 
 var read = (title) => {

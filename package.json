@@ -9,7 +9,7 @@
   "author": "Salman",
   "license": "ISC",
   "dependencies": {
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.19",
     "save": "^2.3.3",
     "yargs": "^4.7.1"
   }
